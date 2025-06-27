@@ -1,0 +1,32 @@
+[project]
+name = "mcp-deployment"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.10.0",
+]
+
+# [project.scripts] defines command-line entry points for the project.
+# This allows users to run `mcp-server` from the command line, which will
+# execute the `main()` function in the `mcpserver.__main__` module.
+[project.scripts]
+mcp-server = "mcpserver.__main__:main"
+
+# [build-system] specifies the build system requirements.
+# 'setuptools' is used to build the project, and 'setuptools.build_meta'
+# is the backend that setuptools uses to perform the build.
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+# [tool.setuptools] is a section specific to setuptools configuration.
+# 'package-dir' tells setuptools that the source code is located in the 'src' directory.
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+# [tool.setuptools.packages.find] configures how setuptools finds packages.
+# 'where = ["src"]' tells setuptools to look for packages inside the 'src' directory.
+[tool.setuptools.packages.find]
+where = ["src"]
