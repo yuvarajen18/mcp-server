@@ -1,6 +1,6 @@
 #Installation commands
 
-
+```json
 {
   "mcpServers": {
     "Weather": {
@@ -58,3 +58,4 @@
     }
   }
 }
+```
