@@ -1,3 +1,6 @@
+#Installation commands
+
+
 {
   "mcpServers": {
     "Weather": {
